@@ -10,7 +10,7 @@
         <Label Content="Welcome" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
         <Button x:Name="listevent" Content="List Events" HorizontalAlignment="Left" Margin="146,208,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20" Click="listevent_Click"/>
         <Button Content="Search Events" HorizontalAlignment="Left" Margin="146,285,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20"/>
-        <Button Content="Modify Event" HorizontalAlignment="Left" Margin="146,369,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20"/>
+        <Button x:Name="modify" Content="Modify Event" HorizontalAlignment="Left" Margin="146,369,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20" Click="modify_Click"/>
         <Label Content="Personal Events:" HorizontalAlignment="Left" Margin="108,122,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Button x:Name="website" Content="Open Website" HorizontalAlignment="Left" Margin="922,190,0,0" VerticalAlignment="Top" Height="70" Width="222" FontSize="20" Click="website_Click"/>
         <Button Content="Register Event" HorizontalAlignment="Left" Margin="922,302,0,0" VerticalAlignment="Top" Height="70" Width="222" FontSize="20" Click="Button_Click"/>

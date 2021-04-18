@@ -93,12 +93,27 @@ namespace Event_Management_System
 
         private void listevent_Click(object sender, RoutedEventArgs e)
         {
+            getEvents();
+        }
 
+        private void modify_Click(object sender, RoutedEventArgs e)
+        {
+            if (datagrid.SelectedItems.Count > 1)
+            {
+                MessageBox.Show("Multiple Items Selected, select only 1");
+            }
+            else
+            {
+                DataRowView row = datagrid.SelectedItem as DataRowView;
+                //MessageBox.Show(row.Row.ItemArray[4].ToString());
+                webpage web = new webpage(row.Row.ItemArray[4].ToString());
+                web.Show();
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            getEvents();
         }
     }
 }
