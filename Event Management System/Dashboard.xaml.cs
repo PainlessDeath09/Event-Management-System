@@ -88,6 +88,8 @@ namespace Event_Management_System
                 //MessageBox.Show(row.Row.ItemArray[4].ToString());
                 webpage web = new webpage(row.Row.ItemArray[4].ToString());
                 web.Show();
+                 
+                
             }
         }
 
@@ -106,8 +108,14 @@ namespace Event_Management_System
             {
                 DataRowView row = datagrid.SelectedItem as DataRowView;
                 //MessageBox.Show(row.Row.ItemArray[4].ToString());
-                webpage web = new webpage(row.Row.ItemArray[4].ToString());
-                web.Show();
+                modifyEvent mod = new modifyEvent();
+                mod.eventName.Text = row.Row.ItemArray[2].ToString();
+                mod.col.Text = row.Row.ItemArray[1].ToString();
+                mod.time.Text = row.Row.ItemArray[3].ToString();
+                mod.evID.Text = row.Row.ItemArray[0].ToString();
+                mod.web.Text = row.Row.ItemArray[4].ToString();
+                mod.Show();
+            
             }
         }
 
