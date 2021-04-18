@@ -35,6 +35,18 @@ namespace Event_Management_System
             reg.Show();
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            this.Close();
+            window.Show();
+        }
+
+        private void website_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             con.Open();
@@ -62,7 +74,8 @@ namespace Event_Management_System
                 }
             }
             dt.AcceptChanges();
-
+            dt.Columns.Remove("uid");
+            dt.AcceptChanges();
             datagrid.DataContext = dt.DefaultView;
         }
     }

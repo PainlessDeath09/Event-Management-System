@@ -73,8 +73,7 @@ namespace Event_Management_System
                     found = 1;
                     username = row["name"].ToString();
                     Dashboard dash = new Dashboard(username, userid);
-                    //this.Hide();
-                   // Dashboard dash = new Dashboard();
+                    this.Close();
                     dash.Show();
                 }
                 
@@ -85,7 +84,7 @@ namespace Event_Management_System
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
-           
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void register_Click(object sender, RoutedEventArgs e)

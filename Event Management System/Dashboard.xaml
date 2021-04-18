@@ -12,12 +12,13 @@
         <Button Content="Search Events" HorizontalAlignment="Left" Margin="146,285,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20"/>
         <Button Content="Modify Event" HorizontalAlignment="Left" Margin="146,369,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20"/>
         <Label Content="Personal Events:" HorizontalAlignment="Left" Margin="108,122,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Button Content="Show Event Catalogue" HorizontalAlignment="Left" Margin="922,190,0,0" VerticalAlignment="Top" Height="70" Width="222" FontSize="20"/>
+        <Button x:Name="website" Content="Open Website" HorizontalAlignment="Left" Margin="922,190,0,0" VerticalAlignment="Top" Height="70" Width="222" FontSize="20" Click="website_Click"/>
         <Button Content="Register Event" HorizontalAlignment="Left" Margin="922,302,0,0" VerticalAlignment="Top" Height="70" Width="222" FontSize="20" Click="Button_Click"/>
         <Button Content="Check Payment Info" HorizontalAlignment="Left" Margin="922,417,0,0" VerticalAlignment="Top" Height="70" Width="222" FontSize="20"/>
         <Label Content="Current Running Event Highlights:" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top" Height="31" Width="284" FontSize="18"/>
         <Label x:Name="usernamedisplay" Content="" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
         <DataGrid x:Name="datagrid" Margin="342,213,381,213" ItemsSource="{Binding}"/>
+        <Button Content="LogOut" Margin="0,0,79,43" Foreground="Red" Click="Button_Click_1" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="107"/>
 
     </Grid>
 </Window>
