@@ -22,11 +22,12 @@ namespace Event_Management_System
         SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\Database.mdf\";Integrated Security=True");
         SqlCommand cmd;
         SqlDataReader dr;
-        String username;
-        public Dashboard(string _username)
+        String username, uid;
+        public Dashboard(string _username, String _uid)
         {
             InitializeComponent();
             username = _username;
+            uid = _uid;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -44,6 +45,25 @@ namespace Event_Management_System
             dr = cmd.ExecuteReader();
             dt.Load(dr);
             con.Close();
+
+            /*foreach(DataRow row in dt.Rows)
+            {
+                if (!(row["uid"].ToString().Contains(username))) ;
+                {
+                    row.Delete();
+                }
+            }*/
+            dt.AcceptChanges();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (!(row["uid"].ToString().Contains(uid)))
+                {
+                    row.Delete();                 
+                }
+            }
+            dt.AcceptChanges();
+
+            datagrid.DataContext = dt.DefaultView;
         }
     }
 }

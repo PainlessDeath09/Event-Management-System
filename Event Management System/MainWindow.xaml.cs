@@ -72,7 +72,7 @@ namespace Event_Management_System
                     MessageBox.Show("Login Success");
                     found = 1;
                     username = row["name"].ToString();
-                    Dashboard dash = new Dashboard(username);
+                    Dashboard dash = new Dashboard(username, userid);
                     //this.Hide();
                    // Dashboard dash = new Dashboard();
                     dash.Show();

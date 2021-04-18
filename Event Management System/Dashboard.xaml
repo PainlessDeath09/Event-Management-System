@@ -15,9 +15,9 @@
         <Button Content="Show Event Catalogue" HorizontalAlignment="Left" Margin="922,190,0,0" VerticalAlignment="Top" Height="70" Width="222" FontSize="20"/>
         <Button Content="Register Event" HorizontalAlignment="Left" Margin="922,302,0,0" VerticalAlignment="Top" Height="70" Width="222" FontSize="20" Click="Button_Click"/>
         <Button Content="Check Payment Info" HorizontalAlignment="Left" Margin="922,417,0,0" VerticalAlignment="Top" Height="70" Width="222" FontSize="20"/>
-        <Rectangle HorizontalAlignment="Left" Height="279" Margin="393,208,0,0" Stroke="Black" VerticalAlignment="Top" Width="490"/>
         <Label Content="Current Running Event Highlights:" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top" Height="31" Width="284" FontSize="18"/>
         <Label x:Name="usernamedisplay" Content="" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
+        <DataGrid x:Name="datagrid" Margin="342,213,381,213" ItemsSource="{Binding}"/>
 
     </Grid>
 </Window>
