@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Event_Management_System"
         mc:Ignorable="d"
-        Title="Dashboard" Height="720" Width="1280" Loaded="Window_Loaded">
+        Title="Dashboard" Height="720" Width="1280" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Welcome" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
         <Button x:Name="listevent" Content="List Events" HorizontalAlignment="Left" Margin="146,208,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20" Click="listevent_Click"/>

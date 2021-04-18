@@ -55,8 +55,9 @@ namespace Event_Management_System
         {
             con.Open();
             String userid = uid.Text;
+            String passwd = pass.Password;
             DataTable dt = new DataTable();
-
+            
             String syntax = "SELECT * from personDB";
             cmd = new SqlCommand(syntax, con);
             dr = cmd.ExecuteReader();
@@ -69,12 +70,25 @@ namespace Event_Management_System
             {
                 if(row["uid"].ToString()==userid)
                 {
-                    MessageBox.Show("Login Success");
-                    found = 1;
-                    username = row["name"].ToString();
-                    Dashboard dash = new Dashboard(username, userid);
-                    this.Close();
-                    dash.Show();
+                    if (row["passwd"].ToString() == passwd)
+                    {
+                        MessageBox.Show("Login Success");
+                        found = 1;
+                        username = row["name"].ToString();
+                        Dashboard dash = new Dashboard(username, userid);
+                        this.Close();
+                        dash.Show();
+                    }
+                    else if(String.IsNullOrEmpty(passwd))
+                    {
+                        MessageBox.Show("Password cannot be empty");
+                        found = 1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password Incorrect, Please check");
+                        found = 1;
+                    }
                 }
                 
             }
