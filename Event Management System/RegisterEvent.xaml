@@ -7,20 +7,18 @@
         mc:Ignorable="d"
         Title="RegisterEvent" Height="459" Width="348">
     <Grid>
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="26,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="EventName:" HorizontalAlignment="Left" Margin="26,36,0,0" VerticalAlignment="Top"/>
         <Label Content="College:" HorizontalAlignment="Left" Margin="26,67,0,0" VerticalAlignment="Top"/>
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="26,98,0,0" VerticalAlignment="Top"/>
-        <Label Content="Confirm Password:" HorizontalAlignment="Left" Margin="26,129,0,0" VerticalAlignment="Top"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="27,160,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ph No:" HorizontalAlignment="Left" Margin="27,196,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="151,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="151,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="151,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="151,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="151,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="151,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Event TIme:" HorizontalAlignment="Left" Margin="26,98,0,0" VerticalAlignment="Top"/>
+        <Label Content="EventID" HorizontalAlignment="Left" Margin="26,129,0,0" VerticalAlignment="Top"/>
+        <Label Content="Website:" HorizontalAlignment="Left" Margin="27,160,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="evID" HorizontalAlignment="Left" Margin="151,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="time" HorizontalAlignment="Left" Margin="151,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="col" HorizontalAlignment="Left" Margin="151,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="eventName" HorizontalAlignment="Left" Margin="151,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="web" HorizontalAlignment="Left" Margin="151,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Register Event" HorizontalAlignment="Left" Margin="47,271,0,0" VerticalAlignment="Top" Height="44" Width="104" Click="Button_Click"/>
-        <Button Content="Reset" HorizontalAlignment="Left" Margin="50,345,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="reset" Content="Reset" HorizontalAlignment="Left" Margin="50,345,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

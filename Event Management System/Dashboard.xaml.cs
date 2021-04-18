@@ -23,6 +23,40 @@ namespace Event_Management_System
         SqlCommand cmd;
         SqlDataReader dr;
         String username, uid;
+
+
+        public void getEvents()
+        {
+            con.Open();
+            usernamedisplay.Content = username;
+            DataTable dt = new DataTable();
+            String syntax = "SELECT * from adminDB";
+            cmd = new SqlCommand(syntax, con);
+            dr = cmd.ExecuteReader();
+            dt.Load(dr);
+            con.Close();
+
+            /*foreach(DataRow row in dt.Rows)
+            {
+                if (!(row["uid"].ToString().Contains(username))) ;
+                {
+                    row.Delete();
+                }
+            }*/
+            dt.AcceptChanges();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (!(row["uid"].ToString().Contains(uid)))
+                {
+                    row.Delete();
+                }
+            }
+            dt.AcceptChanges();
+            dt.Columns.Remove("uid");
+            dt.AcceptChanges();
+            datagrid.DataContext = dt.DefaultView;
+        }
+
         public Dashboard(string _username, String _uid)
         {
             InitializeComponent();
@@ -31,7 +65,7 @@ namespace Event_Management_System
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            RegisterEvent reg = new RegisterEvent();
+            RegisterEvent reg = new RegisterEvent(uid);
             reg.Show();
         }
 
@@ -57,36 +91,14 @@ namespace Event_Management_System
             }
         }
 
+        private void listevent_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            con.Open();
-            usernamedisplay.Content = username;
-            DataTable dt = new DataTable();
-            String syntax = "SELECT * from adminDB";
-            cmd = new SqlCommand(syntax, con);
-            dr = cmd.ExecuteReader();
-            dt.Load(dr);
-            con.Close();
-
-            /*foreach(DataRow row in dt.Rows)
-            {
-                if (!(row["uid"].ToString().Contains(username))) ;
-                {
-                    row.Delete();
-                }
-            }*/
-            dt.AcceptChanges();
-            foreach (DataRow row in dt.Rows)
-            {
-                if (!(row["uid"].ToString().Contains(uid)))
-                {
-                    row.Delete();                 
-                }
-            }
-            dt.AcceptChanges();
-            dt.Columns.Remove("uid");
-            dt.AcceptChanges();
-            datagrid.DataContext = dt.DefaultView;
+            
         }
     }
 }

@@ -8,7 +8,7 @@
         Title="Dashboard" Height="720" Width="1280" Loaded="Window_Loaded">
     <Grid>
         <Label Content="Welcome" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
-        <Button Content="List Events" HorizontalAlignment="Left" Margin="146,208,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20"/>
+        <Button x:Name="listevent" Content="List Events" HorizontalAlignment="Left" Margin="146,208,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20" Click="listevent_Click"/>
         <Button Content="Search Events" HorizontalAlignment="Left" Margin="146,285,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20"/>
         <Button Content="Modify Event" HorizontalAlignment="Left" Margin="146,369,0,0" VerticalAlignment="Top" Height="50" Width="174" FontSize="20"/>
         <Label Content="Personal Events:" HorizontalAlignment="Left" Margin="108,122,0,0" VerticalAlignment="Top" FontSize="18"/>
